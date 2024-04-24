@@ -1,4 +1,7 @@
 {
   "name": "reactNativeApp",
-  "displayName": "reactNativeApp"
+  "displayName": "reactNativeApp",
+  "plugins": [
+    "expo-font"
+  ]
 }
