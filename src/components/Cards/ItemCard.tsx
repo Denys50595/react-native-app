@@ -1,6 +1,8 @@
 import React from 'react';
 import {Image, Text, View} from 'react-native';
 import {style} from './ItemCardStyles';
+import {pressableStyle} from '../CustomPressable/CustomPressableStyles';
+import CustomPressable from '../CustomPressable/CustomPressable';
 
 interface Props {
   title: string;
@@ -8,7 +10,11 @@ interface Props {
   image: string;
 }
 
-const ItemCard = ({item}: {item: Props}) => {
+const ItemCard = ({item: {title, isNew, image}}: {item: Props}) => {
+  const handlePress = () => {
+    console.warn('warn');
+  };
+
   return (
     <View style={style.card}>
       <View style={style.cardContent}>
@@ -16,10 +22,10 @@ const ItemCard = ({item}: {item: Props}) => {
           <Image
             style={style.logo}
             source={{
-              uri: item.image,
+              uri: image,
             }}
           />
-          {item.isNew && (
+          {isNew && (
             <View style={style.newContainer}>
               <Text style={style.newContainerText}>New</Text>
             </View>
@@ -27,7 +33,7 @@ const ItemCard = ({item}: {item: Props}) => {
         </View>
         <View style={style.cardWrap}>
           <View style={style.cardTitleContainer}>
-            <Text style={{textTransform: 'uppercase'}}>{item.title}</Text>
+            <Text style={{textTransform: 'uppercase'}}>{title}</Text>
             <Image
               style={{height: 20, width: 20}}
               source={require('../../../assets/heart.png')}
@@ -44,11 +50,16 @@ const ItemCard = ({item}: {item: Props}) => {
               facilis earum, ullam quae distinctio delectus voluptatibus dolore
               omnis exercitationem quod, tempore quibusdam.
             </Text>
-            <Text style={{marginRight: 5}}>Buy</Text>
-            <Image
-              style={{height: 20, width: 20}}
-              source={require('../../../assets/basket.png')}
-            />
+            <CustomPressable
+              onPress={handlePress}
+              rippleColor="blue"
+              style={pressableStyle.cardButton}>
+              <Text style={{marginRight: 5}}>Buy</Text>
+              <Image
+                style={{height: 20, width: 20}}
+                source={require('../../../assets/basket.png')}
+              />
+            </CustomPressable>
           </View>
         </View>
       </View>
