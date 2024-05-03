@@ -9,15 +9,11 @@ const useWindow = () => {
 
   useEffect(() => {
     const onChange = ({window}: any) => {
-      // console.warn('on change')
       setWindowSize({width: window.width, height: window.height});
     };
 
-    Dimensions.addEventListener('change', onChange);
-
-    return () => {
-      Dimensions.removeEventListener('change', onChange);
-    };
+    const dimensionsHandler = Dimensions.addEventListener('change', onChange);
+    return () => dimensionsHandler.remove();
   }, []);
 
   return {windowSize};
