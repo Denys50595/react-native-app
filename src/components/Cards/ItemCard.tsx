@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
+import {Alert, Image, Text, View} from 'react-native';
 import {style} from './ItemCardStyles';
 import {pressableStyle} from '../CustomPressable/CustomPressableStyles';
 import CustomPressable from '../CustomPressable/CustomPressable';
@@ -11,9 +11,15 @@ interface Props {
 }
 
 const ItemCard = ({item: {title, isNew, image}}: {item: Props}) => {
-  const handlePress = () => {
-    console.warn('warn');
-  };
+  const handlePress = () =>
+    Alert.alert('Alert Title', 'My Alert Msg', [
+      {
+        text: 'Cancel',
+        onPress: () => console.warn('Cancel'),
+        style: 'cancel',
+      },
+      {text: 'OK', onPress: () => console.warn('OK')},
+    ]);
 
   return (
     <View style={style.card}>

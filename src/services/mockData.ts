@@ -188,7 +188,7 @@ export const mockCarouselData = [
     isNew: true,
     isHot: false,
     isVegetarian: true,
-    id: '1',
+    id: '123',
   },
   {
     createdAt: '2024-04-24T02:27:26.226Z',
@@ -200,7 +200,7 @@ export const mockCarouselData = [
     isNew: true,
     isHot: true,
     isVegetarian: true,
-    id: '2',
+    id: '2434',
   },
   {
     createdAt: '2024-04-23T23:33:29.876Z',
@@ -212,7 +212,7 @@ export const mockCarouselData = [
     isNew: false,
     isHot: true,
     isVegetarian: true,
-    id: '3',
+    id: '312',
   },
   {
     createdAt: '2024-04-24T02:43:50.706Z',
@@ -224,6 +224,6 @@ export const mockCarouselData = [
     isNew: false,
     isHot: false,
     isVegetarian: false,
-    id: '4',
+    id: '434',
   },
 ];
