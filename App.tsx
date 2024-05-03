@@ -18,10 +18,11 @@ import {
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import ItemCard from './src/components/Cards/ItemCard';
-import {mockItemData} from './src/services/mockData';
+import {mockCarouselData, mockItemData} from './src/services/mockData';
 import CustomPressable from './src/components/CustomPressable/CustomPressable';
 import {pressableStyle} from './src/components/CustomPressable/CustomPressableStyles';
 import ModalComponent from './src/components/modals/ModalComponent';
+import Carousel from './src/components/Carousel/Carousel';
 
 const App = (): React.JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -38,6 +39,12 @@ const App = (): React.JSX.Element => {
   return (
     <SafeAreaView style={backgroundStyle}>
       <View
+        style={{
+          height: '100%',
+        }}>
+        <Carousel data={mockCarouselData}></Carousel>
+      </View>
+      {/* <View
         style={[
           styles.filterContainer,
           searchVisible ? styles.hasSearch : styles.noSearch,
@@ -81,7 +88,7 @@ const App = (): React.JSX.Element => {
         keyExtractor={item => item.id}
         style={styles.scrollContainer}
         ListEmptyComponent={<Text>No items to display</Text>}
-      />
+      /> */}
     </SafeAreaView>
   );
 };

@@ -1,4 +1,4 @@
-export const mockItemData =[
+export const mockItemData = [
   {
     createdAt: '2024-04-23T15:34:11.689Z',
     title: 'Bespoke Soft Soap',
@@ -175,5 +175,55 @@ export const mockItemData =[
     isHot: false,
     isVegetarian: true,
     id: '15',
-  }
+  },
+];
+
+export const mockCarouselData = [
+  {
+    createdAt: '2024-04-23T15:34:11.689Z',
+    title: 'Bespoke Soft Soap',
+    image: 'https://loremflickr.com/640/480/food',
+    price: '504.00',
+    description: 'The Football Is Good For Training And Recreational Purposes',
+    isNew: true,
+    isHot: false,
+    isVegetarian: true,
+    id: '1',
+  },
+  {
+    createdAt: '2024-04-24T02:27:26.226Z',
+    title: 'Fantastic Metal Hat',
+    image: 'https://loremflickr.com/640/480/food',
+    price: '803.00',
+    description:
+      'New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart',
+    isNew: true,
+    isHot: true,
+    isVegetarian: true,
+    id: '2',
+  },
+  {
+    createdAt: '2024-04-23T23:33:29.876Z',
+    title: 'Luxurious Concrete Bacon',
+    image: 'https://loremflickr.com/640/480/food',
+    price: '520.00',
+    description:
+      'Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support',
+    isNew: false,
+    isHot: true,
+    isVegetarian: true,
+    id: '3',
+  },
+  {
+    createdAt: '2024-04-24T02:43:50.706Z',
+    title: 'Unbranded Metal Chips',
+    image: 'https://loremflickr.com/640/480/food',
+    price: '143.00',
+    description:
+      'The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design',
+    isNew: false,
+    isHot: false,
+    isVegetarian: false,
+    id: '4',
+  },
 ];
