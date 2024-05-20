@@ -37,15 +37,15 @@ const Flatlist = () => {
   }, []);
 
   const onLoad = (distanceFromEnd: number) => {
-    if (filteredData.length < 20) {
-      console.warn('onLoad', distanceFromEnd);
-      const fakeItem: any = {
-        id: distanceFromEnd,
-        image: 'https://loremflickr.com/640/480/food',
-        title: 'Dynamicaly loading',
-      };
-      filteredData.push(fakeItem);
-    }
+    // if (filteredData.length < 20) {
+    //   console.warn('onLoad', distanceFromEnd);
+    //   const fakeItem: any = {
+    //     id: distanceFromEnd,
+    //     image: 'https://loremflickr.com/640/480/food',
+    //     title: 'Dynamicaly loading',
+    //   };
+    //   filteredData.push(fakeItem);
+    // }
   };
 
   const handleSharePress = () => {
@@ -109,12 +109,7 @@ const Flatlist = () => {
         setVisible={setModalVisible}></ModalComponent>
       <FlatList
         data={filteredData}
-        renderItem={({item}) => (
-          <ItemCard
-            item={item}
-            // onClick={navigation.navigate('ItemDetails', {id: item.id})}
-          />
-        )}
+        renderItem={({item}) => <ItemCard item={item} />}
         keyExtractor={item => item.id}
         style={styles.scrollContainer}
         ListEmptyComponent={<Text>No items to display</Text>}

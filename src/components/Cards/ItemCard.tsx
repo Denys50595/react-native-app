@@ -4,6 +4,7 @@ import {style} from './ItemCardStyles';
 import {pressableStyle} from '../CustomPressable/CustomPressableStyles';
 import CustomPressable from '../CustomPressable/CustomPressable';
 import {useNavigation} from '@react-navigation/native';
+import OrderStore from '../../store/OrderStore';
 
 interface Props {
   title: string;
@@ -11,24 +12,15 @@ interface Props {
   image: string;
   id: string;
   description: string;
+  price: number;
 }
 
 const ItemCard = ({
-  item: {title, isNew, image, id, description},
+  item: {title, isNew, image, id, description, price},
 }: {
   item: Props;
 }) => {
   const navigation = useNavigation();
-  const handlePress = () =>
-    Alert.alert('Alert Title', 'My Alert Msg', [
-      {
-        text: 'Cancel',
-        onPress: () => console.warn('Cancel'),
-        style: 'cancel',
-      },
-      {text: 'OK', onPress: () => console.warn('OK')},
-    ]);
-
   const hangeNavDetails = () => {
     navigation.navigate('ItemDetails', {id});
   };
@@ -60,6 +52,7 @@ const ItemCard = ({
             </View>
             <View style={style.cardMiddleWrap}>
               <Text style={{marginRight: 20, fontWeight: 'bold'}}>
+                {price}
                 New price
               </Text>
               <Text style={{textDecorationLine: 'line-through'}}>
@@ -71,7 +64,13 @@ const ItemCard = ({
                 {description}
               </Text>
               <CustomPressable
-                onPress={handlePress}
+                onPress={() =>
+                  OrderStore.addOrder({
+                    id,
+                    title,
+                    price,
+                  })
+                }
                 rippleColor="blue"
                 style={pressableStyle.cardButton}>
                 <Text style={{marginRight: 5}}>Buy</Text>

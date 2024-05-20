@@ -15,6 +15,9 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ItemDetailsScreen from './src/screens/ItemDetailsScreen';
 import CustomTabIcon from './src/components/CustomTabIcon/CustomTabIcon';
 import ModalScreen from './src/screens/ModalScreen';
+import Cart from './src/screens/Cart';
+import OrderStore from './src/store/OrderStore';
+import {observer} from 'mobx-react';
 
 const Stack = createNativeStackNavigator();
 const Tab: any = createBottomTabNavigator();
@@ -43,12 +46,12 @@ const Tab1Stack = () => {
   );
 };
 
-const App = (): React.JSX.Element => {
+const App = observer(() => {
   return (
     <>
       <NavigationContainer>
         <Tab.Navigator
-          tabBarOptions={{
+          screenOptions={{
             activeTintColor: '#000000',
             inactiveTintColor: 'gray',
           }}>
@@ -60,6 +63,16 @@ const App = (): React.JSX.Element => {
               tabBarIcon: ({focused}: any) => (
                 <CustomTabIcon focused={focused} iconName="list" />
               ),
+            }}
+          />
+          <Tab.Screen
+            name="Cart"
+            component={Cart}
+            options={{
+              tabBarIcon: ({focused}: any) => (
+                <CustomTabIcon focused={focused} iconName="shopping-cart" />
+              ),
+              tabBarBadge: OrderStore.orderCount ? OrderStore.orderCount : null,
             }}
           />
           <Tab.Screen
@@ -84,6 +97,6 @@ const App = (): React.JSX.Element => {
       </NavigationContainer>
     </>
   );
-};
+});
 
 export default App;

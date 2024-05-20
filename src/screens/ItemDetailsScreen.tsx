@@ -1,7 +1,8 @@
 import {useRoute} from '@react-navigation/native';
 import React from 'react';
-import {Image, Text} from 'react-native';
+import {Button, Image, Text} from 'react-native';
 import {mockItemData} from '../services/mockData';
+import OrderStore from '../store/OrderStore';
 
 const ItemDetails = () => {
   const route = useRoute();
@@ -9,7 +10,7 @@ const ItemDetails = () => {
   const getItemById = (id: string) => {
     return mockItemData.find(item => item.id === id);
   };
-  const result = getItemById(id);
+  const result: any = getItemById(id);
 
   return (
     <>
@@ -21,6 +22,7 @@ const ItemDetails = () => {
         }}
       />
       <Text>{result?.description}</Text>
+      <Button title="Add to Cart" onPress={() => OrderStore.addOrder(result)} />
     </>
   );
 };
