@@ -1,11 +1,22 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {Alert, Button, StyleSheet, Text, View} from 'react-native';
 import OrderStore from '../store/OrderStore';
 import {observer} from 'mobx-react';
-import ItemCard from '../components/Cards/ItemCard';
 
 const Cart = observer(() => {
   const {orders, totalAmount} = OrderStore;
+
+  const handleAdd = useCallback((order: any) => {
+    OrderStore.removeOrder(order);
+  }, []);
+
+  const handleRemove = useCallback((id: string) => {
+    OrderStore.removeOrder(id);
+  }, []);
+
+  const handleClear = useCallback(() => {
+    OrderStore.clearOrders();
+  }, []);
 
   return (
     <>
@@ -16,14 +27,8 @@ const Cart = observer(() => {
             <Text>
               x{order.quantity} - ${order.price * order.quantity}
             </Text>
-            <Button
-              title="Add"
-              onPress={() => OrderStore.addOrder(order)}
-            />
-            <Button
-              title="Remove"
-              onPress={() => OrderStore.removeOrder(order.id)}
-            />
+            <Button title="Add" onPress={() => handleAdd(order)} />
+            <Button title="Remove" onPress={() => handleRemove(order.id)} />
           </View>
         ))}
         <Text style={{textAlign: 'center'}}>Total: ${totalAmount}</Text>
@@ -40,7 +45,7 @@ const Cart = observer(() => {
                 onPress: () => console.warn('Cancel'),
                 style: 'cancel',
               },
-              {text: 'OK', onPress: () => OrderStore.clearOrders()},
+              {text: 'OK', onPress: () => handleClear()},
             ],
           );
         }}
