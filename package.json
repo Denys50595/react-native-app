@@ -10,10 +10,13 @@
     "test": "jest"
   },
   "dependencies": {
+    "@babel/plugin-transform-class-static-block": "^7.24.4",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/bottom-tabs": "^6.5.20",
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/native-stack": "^6.9.26",
+    "mobx": "^6.12.3",
+    "mobx-react": "^9.1.1",
     "react": "18.2.0",
     "react-native": "0.74.0",
     "react-native-gesture-handler": "^2.16.2",
@@ -24,6 +27,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@babel/plugin-proposal-decorators": "^7.24.1",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
     "@react-native/babel-preset": "0.74.81",

@@ -3,7 +3,7 @@ export const mockItemData = [
     createdAt: '2024-04-23T15:34:11.689Z',
     title: 'Bespoke Soft Soap',
     image: 'https://loremflickr.com/640/480/food',
-    price: '504.00',
+    price: 504.0,
     description: 'The Football Is Good For Training And Recreational Purposes',
     isNew: true,
     isHot: false,
@@ -14,7 +14,7 @@ export const mockItemData = [
     createdAt: '2024-04-24T02:27:26.226Z',
     title: 'Fantastic Metal Hat',
     image: 'https://loremflickr.com/640/480/food',
-    price: '803.00',
+    price: 803.0,
     description:
       'New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart',
     isNew: true,
@@ -26,7 +26,7 @@ export const mockItemData = [
     createdAt: '2024-04-23T23:33:29.876Z',
     title: 'Luxurious Concrete Bacon',
     image: 'https://loremflickr.com/640/480/food',
-    price: '520.00',
+    price: 520.0,
     description:
       'Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support',
     isNew: false,
@@ -38,7 +38,7 @@ export const mockItemData = [
     createdAt: '2024-04-24T02:43:50.706Z',
     title: 'Unbranded Metal Chips',
     image: 'https://loremflickr.com/640/480/food',
-    price: '143.00',
+    price: 143.0,
     description:
       'The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design',
     isNew: false,
@@ -50,7 +50,7 @@ export const mockItemData = [
     createdAt: '2024-04-23T15:43:56.714Z',
     title: 'Ergonomic Concrete Chips',
     image: 'https://loremflickr.com/640/480/food',
-    price: '200.00',
+    price: 200.0,
     description:
       'The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J',
     isNew: false,
@@ -62,7 +62,7 @@ export const mockItemData = [
     createdAt: '2024-04-24T02:22:44.305Z',
     title: 'Fantastic Soft Computer',
     image: 'https://loremflickr.com/640/480/food',
-    price: '658.00',
+    price: 658.0,
     description:
       'Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support',
     isNew: false,
@@ -74,7 +74,7 @@ export const mockItemData = [
     createdAt: '2024-04-24T05:42:34.583Z',
     title: 'Oriental Soft Car',
     image: 'https://loremflickr.com/640/480/food',
-    price: '869.00',
+    price: 869.0,
     description:
       'Carbonite web goalkeeper gloves are ergonomically designed to give easy fit',
     isNew: false,
@@ -86,7 +86,7 @@ export const mockItemData = [
     createdAt: '2024-04-23T09:55:29.710Z',
     title: 'Oriental Frozen Hat',
     image: 'https://loremflickr.com/640/480/food',
-    price: '432.00',
+    price: 432.0,
     description:
       'The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality',
     isNew: false,
@@ -98,7 +98,7 @@ export const mockItemData = [
     createdAt: '2024-04-23T12:17:31.372Z',
     title: 'Handcrafted Bronze Car',
     image: 'https://loremflickr.com/640/480/food',
-    price: '495.00',
+    price: 495.0,
     description: 'The Football Is Good For Training And Recreational Purposes',
     isNew: true,
     isHot: false,
@@ -109,7 +109,7 @@ export const mockItemData = [
     createdAt: '2024-04-24T02:13:34.107Z',
     title: 'Refined Bronze Chicken',
     image: 'https://loremflickr.com/640/480/food',
-    price: '182.00',
+    price: 182.0,
     description: 'The Football Is Good For Training And Recreational Purposes',
     isNew: false,
     isHot: true,
@@ -120,7 +120,7 @@ export const mockItemData = [
     createdAt: '2024-04-23T11:03:19.887Z',
     title: 'Licensed Metal Hat',
     image: 'https://loremflickr.com/640/480/food',
-    price: '148.00',
+    price: 148.0,
     description:
       'Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals',
     isNew: true,
@@ -132,7 +132,7 @@ export const mockItemData = [
     createdAt: '2024-04-23T19:41:08.145Z',
     title: 'Refined Metal Chicken',
     image: 'https://loremflickr.com/640/480/food',
-    price: '181.00',
+    price: 181.0,
     description:
       'The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality',
     isNew: true,
@@ -144,7 +144,7 @@ export const mockItemData = [
     createdAt: '2024-04-23T22:22:41.197Z',
     title: 'Unbranded Metal Gloves',
     image: 'https://loremflickr.com/640/480/food',
-    price: '432.00',
+    price: 432.0,
     description:
       'New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart',
     isNew: false,
@@ -156,7 +156,7 @@ export const mockItemData = [
     createdAt: '2024-04-23T15:32:11.784Z',
     title: 'Modern Plastic Shirt',
     image: 'https://loremflickr.com/640/480/food',
-    price: '73.00',
+    price: 73.0,
     description:
       'The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design',
     isNew: true,
@@ -168,7 +168,7 @@ export const mockItemData = [
     createdAt: '2024-04-23T14:33:25.527Z',
     title: 'Sleek Concrete Keyboard',
     image: 'https://loremflickr.com/640/480/food',
-    price: '813.00',
+    price: 813.0,
     description:
       'The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J',
     isNew: false,
@@ -183,7 +183,7 @@ export const mockCarouselData = [
     createdAt: '2024-04-23T15:34:11.689Z',
     title: 'Bespoke Soft Soap',
     image: 'https://loremflickr.com/640/480/food',
-    price: '504.00',
+    price: 504.0,
     description: 'The Football Is Good For Training And Recreational Purposes',
     isNew: true,
     isHot: false,
@@ -194,7 +194,7 @@ export const mockCarouselData = [
     createdAt: '2024-04-24T02:27:26.226Z',
     title: 'Fantastic Metal Hat',
     image: 'https://loremflickr.com/640/480/food',
-    price: '803.00',
+    price: 803.0,
     description:
       'New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart',
     isNew: true,
@@ -206,7 +206,7 @@ export const mockCarouselData = [
     createdAt: '2024-04-23T23:33:29.876Z',
     title: 'Luxurious Concrete Bacon',
     image: 'https://loremflickr.com/640/480/food',
-    price: '520.00',
+    price: 520.0,
     description:
       'Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support',
     isNew: false,
@@ -218,7 +218,7 @@ export const mockCarouselData = [
     createdAt: '2024-04-24T02:43:50.706Z',
     title: 'Unbranded Metal Chips',
     image: 'https://loremflickr.com/640/480/food',
-    price: '143.00',
+    price: 143.0,
     description:
       'The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design',
     isNew: false,

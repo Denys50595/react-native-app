@@ -1,4 +1,4 @@
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import EntypoIcons from 'react-native-vector-icons/Entypo';
 
 const CustomTabIcon = ({focused, iconName, size}: any) => {
