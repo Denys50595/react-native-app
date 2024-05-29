@@ -7,6 +7,7 @@ module.exports = {
         version: '2023-05',
       },
     ],
-    "@babel/plugin-transform-class-static-block"
+    '@babel/plugin-transform-class-static-block',
+    'react-native-reanimated/plugin',
   ],
 };
